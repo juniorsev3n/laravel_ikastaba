@@ -90,11 +90,11 @@
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                {{-- <div class="carousel-item active">
                   <img src="{{ url('images/MG_0629-1024x533.jpg') }}" width="3000px" height="400px" alt="">
-                </div>
+                </div> --}}
 
-                <div class="carousel-item">
+                <div class="carousel-item active">
                   <img src="{{ url('images/header.jpg') }}" width="3000px" height="400px" alt="">
                 </div>
 
