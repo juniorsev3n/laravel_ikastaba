@@ -31,6 +31,7 @@ Route::post('password/reset', 'Auth\PasswordController@reset');
 Route::get('/home', 'HomeController@index');
 
 Route::get('tentang', 'PagesController@tentang');
+Route::get('tentang/{slug}', 'PagesController@show');
 Route::get('kontak', 'PagesController@kontak');
 Route::get('p/{slug}', 'PagesController@show');
 

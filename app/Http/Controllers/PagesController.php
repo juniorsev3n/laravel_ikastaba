@@ -25,6 +25,12 @@ class PagesController extends Controller
     public function show($slug)
     {
     	$data = Page::where('slug', $slug)->first();
-    	return view('paging.show', compact('data'));
+        if(isset($data))
+        {
+    	   return view('paging.show', compact('data'));
+        }
+        else{
+            return response()->view('errors.404');
+        }
     }
 }

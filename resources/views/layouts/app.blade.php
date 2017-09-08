@@ -39,10 +39,10 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Tentang
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown-item"><a href="{{ url('tentang') }}">Selayang Pandang</a></li>
-                  <li class="dropdown-item"><a href="{{ url('tentang') }}">Sambutan Ketua IKA</a></li>
-                  <li class="dropdown-item"><a href="#">AD/ART</a></li>
-                  <li class="dropdown-item"><a href="#">Struktur Organisasi</a></li>
+                  <li class="dropdown-item"><a href="{{ url('tentang/selayang-pandang') }}">Selayang Pandang</a></li>
+                  <li class="dropdown-item"><a href="{{ url('tentang/sambutan-ketua-ika') }}">Sambutan Ketua IKA</a></li>
+                  <li class="dropdown-item"><a href="{{ url('tentang/ad-art') }}">AD/ART</a></li>
+                  <li class="dropdown-item"><a href="{{ url('tentang/struktur-organisasi') }}">Struktur Organisasi</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
