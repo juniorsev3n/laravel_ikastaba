@@ -91,15 +91,15 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="https://unsplash.it/4000/400" alt="Los Angeles">
+                  <img src="{{ url('images/MG_0629-1024x533.jpg') }}" alt="">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="https://unsplash.it/4000/400" alt="Chicago">
+                  <img src="{{ url('images/header.jpg') }}" alt="">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="https://unsplash.it/4000/400" alt="New York">
+                  <img src="{{ url('images/YDXJ2459-1024x533.jpg') }}" alt="">
                 </div>
               </div>
 
