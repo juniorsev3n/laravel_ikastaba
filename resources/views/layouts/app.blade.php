@@ -91,15 +91,15 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="{{ url('images/MG_0629-1024x533.jpg') }}" alt="">
+                  <img src="{{ url('images/MG_0629-1024x533.jpg') }}" width="3000px" height="400px" alt="">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="{{ url('images/header.jpg') }}" alt="">
+                  <img src="{{ url('images/header.jpg') }}" width="3000px" height="400px" alt="">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="{{ url('images/YDXJ2459-1024x533.jpg') }}" alt="">
+                  <img src="{{ url('images/YDXJ2459-1024x533.jpg') }}" width="3000px" height="400px" alt="">
                 </div>
               </div>
 
