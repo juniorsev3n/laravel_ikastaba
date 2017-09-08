@@ -90,16 +90,16 @@
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
-                {{-- <div class="carousel-item active">
-                  <img src="{{ url('images/MG_0629-1024x533.jpg') }}" width="3000px" height="400px" alt="">
-                </div> --}}
+                <div class="carousel-item active">
+                  <img src="https://www.garnerheadjoints.com/wp-content/uploads/2014/08/headerlight.jpg" width="3000px" height="400px" alt="">
+                </div>
 
                 <div class="carousel-item active">
-                  <img src="{{ url('images/header.jpg') }}" width="3000px" height="400px" alt="">
+                  <img src="https://boredbyhappiness.files.wordpress.com/2013/08/vancouver1.jpg" alt="">
                 </div>
 
                 <div class="carousel-item">
-                  <img src="{{ url('images/YDXJ2459-1024x533.jpg') }}" width="3000px" height="400px" alt="">
+                  <img src="http://tophitz.co.uk/wp-content/uploads/2017/03/Red-Right-Hand-Bamboozle-EP-Cover-Art-3000x500.jpg" width="3000px" height="400px" alt="">
                 </div>
               </div>
 
