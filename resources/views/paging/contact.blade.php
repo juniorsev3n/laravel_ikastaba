@@ -79,15 +79,14 @@
             <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
                 <strong>Ikatan Alumni STABA</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
+                Sekretariat: Jl. Padasuka Atas No. 233 Bandung 40192 Telp: <br>
                 <abbr title="Phone">
                     P:</abbr>
-                (123) 456-7890
+                (022) 20522845
             </address>
             <address>
                 <strong>Administrator</strong><br>
-                <a href="mailto:#">info@ikastaba.or.id</a>
+                <a href="mailto:info@ikastaba.or.id">info@ikastaba.or.id</a>
             </address>
             </form>
         </div>

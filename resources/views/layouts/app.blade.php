@@ -83,13 +83,16 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
+                @foreach(\App\Models\Banner::getHome(3) as $banner)
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                @endforeach
               </ol>
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
+                @foreach(\App\Models\Banner::getHome(3) as $banner)
                 <div class="carousel-item active">
                   <img src="https://www.garnerheadjoints.com/wp-content/uploads/2014/08/headerlight.jpg" alt="">
                 </div>
@@ -101,6 +104,7 @@
                 <div class="carousel-item">
                   <img src="http://tophitz.co.uk/wp-content/uploads/2017/03/Red-Right-Hand-Bamboozle-EP-Cover-Art-3000x500.jpg" alt="">
                 </div>
+                @endforeach
               </div>
 
               <!-- Left and right controls -->
