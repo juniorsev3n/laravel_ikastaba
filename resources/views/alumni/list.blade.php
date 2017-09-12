@@ -54,7 +54,7 @@
                 <h5>Angkatan : {{ $value->angkatan }}</h5>
                 <h5>Jurusan : {{ $value->name }}</h5>
               </div>
-              <div class="col-md-4"><img src="https://unsplash.it/500/500{{-- {{ url('avatar/'.$value->avatar) }} --}}" class="img-fluid rounded-circle" width="200"></div>
+              <div class="col-md-4"><img src="{{ url('avatar/'.$value->avatar) }}" class="img-fluid rounded-circle" width="200"></div>
               </div>
               <hr>
               @endforeach
