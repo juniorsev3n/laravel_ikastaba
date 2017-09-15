@@ -169,7 +169,7 @@ class AuthController extends Controller
             catch (\Exception $e)
             {
                 DB::rollback();
-                return redirect('register')->withErrors($e)>withInput();
+                return redirect('register')->withErrors($e)->withInput();
             }
         } else {
             return redirect('register')
