@@ -38,4 +38,9 @@ public function _construct()
     		
     	}
     }
+
+    public function responden()
+    {
+        return view('alumni.responden');
+    }
 }

@@ -19,6 +19,8 @@
 
     <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
 
+    @yield('head')
+
   </head>
 
   <body>
@@ -67,7 +69,7 @@
             </li>
             @else
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('dashboard')}}"><span class="fa fa-user">My Account</a>
+              <a class="nav-link" href="{{ url('responden')}}"><span class="fa fa-user">Responden</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url('logout')}}"><span class="fa fa-sign-out">Logout</a>

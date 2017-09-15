@@ -30,6 +30,7 @@
     <div class="row">
         <div class="col-md-4">
             <ul>
+                <li><a href="{{ url('responden') }}">Isian Responden</a></li>
                 <li>Edit Profile</li>
                 <li>Posting berita/pengumuman</li>
                 <li>Buat email ikastaba.or.id</li>

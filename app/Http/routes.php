@@ -37,3 +37,5 @@ Route::get('p/{slug}', 'PagesController@show');
 
 Route::get('alumni/direktori', 'AlumniController@list');
 Route::get('dashboard', 'AlumniController@dashboard');
+
+Route::get('responden', 'AlumniController@responden');
