@@ -39,3 +39,11 @@ Route::get('alumni/direktori', 'AlumniController@list');
 Route::get('dashboard', 'AlumniController@dashboard');
 
 Route::get('responden', 'AlumniController@responden');
+
+Route::get('test', function(){
+        \Mail::send('emails.register', ['data' => 'test' ], function ($m) {
+        $m->from('admin@ikastaba.or.id', 'Your Application');
+        $m->to('juniorsev3n@gmail.com','irfan')->subject('IKASTABA REGISTRASI!');
+                });
+
+});
