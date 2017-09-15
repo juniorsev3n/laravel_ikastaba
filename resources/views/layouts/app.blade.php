@@ -21,6 +21,13 @@
 
     @yield('head')
 
+    <style type="text/css">
+        .pagination {
+            padding: 10px;
+            font: 14px;
+        }
+    </style>
+
   </head>
 
   <body>
