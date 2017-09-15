@@ -312,8 +312,8 @@ class AuthController extends Controller
      */
     protected function getFailedLoginMessage()
     {
-        return Lang::has('auth.failed')
-                ? Lang::get('auth.failed')
+        return \Lang::has('auth.failed')
+                ? \Lang::get('auth.failed')
                 : 'Email atau password anda salah';
     }
 
