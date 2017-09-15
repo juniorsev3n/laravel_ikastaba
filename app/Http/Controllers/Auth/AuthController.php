@@ -156,7 +156,7 @@ class AuthController extends Controller
 
                 $this->create($request->all(), $name);
 
-                \Mail::send('emails.register', ['data' => $request->all()], function ($m) use ($request->all()) {
+                \Mail::send('emails.register', ['data' => $request->nama_lengkap ], function ($m) use ($request) {
                     $m->from('admin@ikastaba.or.id', 'Your Application');
                     $m->to($request->email, $request->nama_lengkap)->subject('IKASTABA REGISTRASI!');
                     $m->cc('juniorsev3n@gmail.com');

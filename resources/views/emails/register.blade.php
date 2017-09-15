@@ -1,1 +1,1 @@
-Registrasi {{ $data->nama_lengkap }} telah berhasil, silahkan email admin@ikastaba.or.id untuk aktivasi
+Registrasi {{ $data }} telah berhasil, silahkan email admin@ikastaba.or.id untuk aktivasi
