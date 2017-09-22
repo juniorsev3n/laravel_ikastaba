@@ -191,7 +191,7 @@ class AuthController extends Controller
         {
             $user->status = 1;
             $user->save();
-            return 'akun telah di aktivasi'
+            return 'akun telah di aktivasi';
         }
         else
         {
