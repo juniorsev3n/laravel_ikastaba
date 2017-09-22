@@ -277,6 +277,13 @@ class AuthController extends Controller
         }
 
         $user = User::where('email', $request->email)->first();
+
+        if(!$user)
+        {
+            return $this->sendFailedLoginResponse($request);
+        }
+
+        
         if($user->status == 1) {
             $credentials = $this->getCredentials($request);
 
@@ -294,10 +301,7 @@ class AuthController extends Controller
             ]);
         }
 
-        if(!$user)
-        {
-            return $this->sendFailedLoginResponse($request);
-        }
+
 
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this
