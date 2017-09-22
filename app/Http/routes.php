@@ -47,3 +47,5 @@ Route::get('test', function(){
                 });
 
 });
+
+Route::get('a/{code}', 'AuthController@active');

@@ -156,11 +156,15 @@ class AuthController extends Controller
 
                 $this->create($request->all(), $name);
 
+                $url = 'https://ikastaba.or.id/a/'.base64_encode($request->email);
+
                 \Mail::send('emails.register', ['data' => $request->nama_lengkap ], function ($m) use ($request) {
                     $m->from('admin@ikastaba.or.id', 'Your Application');
                     $m->to($request->email, $request->nama_lengkap)->subject('IKASTABA REGISTRASI!');
-                    $m->cc('juniorsev3n@gmail.com');
-                });
+                    $m->cc('bajayradical@gmail.com');
+                });           
+
+                $this->sendSms($request->nama_lengkap, $url);
 
                 DB::commit();
 
@@ -177,6 +181,42 @@ class AuthController extends Controller
                             ->withErrors(['captcha' => 'Harap mengisikan captcha dengan benar'])
                             ->withInput();
         }
+    }
+
+    public function active($code)
+    {
+        $email = base64_decode($code);
+        $user = User::where('email', $email)->first();
+        if(count($user) > 0)
+        {
+            $user->status = 1;
+            $user->save();
+            return 'akun telah di aktivasi'
+        }
+        else
+        {
+            return 'gagal';
+        }
+    }
+
+    public function sendSms($nama,$url)
+    {
+        $userkey = "tfzlqv";
+        $passkey = "ikastaba1";
+        $nohp = "085720780915";
+        $message = "Ikastaba.or.id : Registrasi dengan nama $nama telah dilakukan, aktivasi $url";
+        $url = "https://reguler.zenziva.net/apps/smsapi.php";
+        $curlHandle = curl_init();
+        curl_setopt($curlHandle, CURLOPT_URL, $url);
+        curl_setopt($curlHandle, CURLOPT_POSTFIELDS, 'userkey='.$userkey.'&passkey='.$passkey.'&nohp='.$nohp.'&pesan='.urlencode($message));
+        curl_setopt($curlHandle, CURLOPT_HEADER, 0);
+        curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curlHandle, CURLOPT_TIMEOUT,30);
+        curl_setopt($curlHandle, CURLOPT_POST, 1);
+        $results = curl_exec($curlHandle);
+        curl_close($curlHandle);
     }
 
     /**
