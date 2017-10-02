@@ -288,8 +288,14 @@ class AuthController extends Controller
             $credentials = $this->getCredentials($request);
 
             if (Auth::attempt($credentials, $request->has('remember'))) {
+
+                if(Auth::user()->isAdmin())
+                {
+                    return redirect('admin/dashboard');
+                }
                 return $this->handleUserWasAuthenticated($request, $throttles);
             }
+
             else {
                 return $this->sendFailedLoginResponse($request);
             }
