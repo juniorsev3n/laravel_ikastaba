@@ -49,3 +49,9 @@ Route::get('test', function(){
 });
 
 Route::get('a/{code}', 'AuthController@active');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function(){
+	Route::get('login', 'AuthController@getLogin');
+	Route::post('login', 'AuthController@postLogin');
+	Route::get('dashboard', 'DashboardController@index')->middleware('admin');
+});

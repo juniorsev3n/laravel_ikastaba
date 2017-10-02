@@ -39,7 +39,7 @@
           <hr>
 
           <!-- Date/Time -->
-          <p>Posted on {{ $data->created_at }}</p>
+          <p>Posted on {{ spo$data->created_at }}</p>
 
           <hr>
 
