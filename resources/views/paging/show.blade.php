@@ -44,7 +44,7 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <!--<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">-->
 
           <hr>
 
@@ -54,7 +54,7 @@
           <hr>
 
           <!-- Comments Form -->
-          <div class="card my-4">
+          {{-- <div class="card my-4">
             <h5 class="card-header">{{!! url()->current() !!}}Leave a Comment:</h5>
             <div class="card-body">
               <form>
@@ -65,17 +65,17 @@
               </form>
             </div>
           </div>
-
+ --}}
           <!-- Single Comment -->
-          <div class="media mb-4">
+          {{-- <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
             <div class="media-body">
               <h5 class="mt-0">Commenter Name</h5>
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
           </div>
-
-          @if (strpos(url()->current(),'/tentang') === TRUE)
+ --}}
+          {{-- @if (strpos(url()->current(),'/tentang') == TRUE)
           <!-- Comment with nested comments -->
           <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
@@ -102,7 +102,7 @@
             </div>
           </div>
           @endif
-
+ --}}
         </div>
 
         <!-- Sidebar Widgets Column -->
@@ -111,23 +111,25 @@
           <!-- Search Widget -->
           <div class="card my-4">
             <h5 class="card-header">Search</h5>
+            <form action="{{ url('search') }}" method="post">
             <div class="card-body">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input name="q" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
                   <button class="btn btn-secondary" type="button">Go!</button>
                 </span>
               </div>
             </div>
+            </form>
           </div>
 
           <!-- Side Widget -->
-          <div class="card my-4">
+{{--           <div class="card my-4">
             <h5 class="card-header">Side Widget</h5>
             <div class="card-body">
               You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
